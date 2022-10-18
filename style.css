@@ -15,12 +15,12 @@ padding: 0;box-sizing: border-box;
           font-family: sans-serif;
       }
       footer{
-          position: absolute;
+          position:fixed ;
           bottom: 0;
           left: 0;
           right: 0;
           background: #111;
-          height: 250px;
+          height: 200px;
           width: 100%;
       
           padding-top: 10px;
@@ -42,7 +42,7 @@ padding: 0;box-sizing: border-box;
       .footer-content p{
           max-width: 100px;
           margin: 10px auto;
-          line-height: 28px;
+          line-height: 18px;
           font-size: 14px;
           color: #cacdd2;
       }
@@ -79,13 +79,13 @@ padding: 0;box-sizing: border-box;
       
       .footer-bottom{
           background: #000;
-          width: 100vw;
+          width: 100;
           padding: 20px;
-      padding-bottom: 40px;
+      padding-bottom: 10px;
           text-align: center;
       }
       .footer-bottom p{
-      float: left;
+      float: center;
           font-size: 14px;
           word-spacing: 2px;
           text-transform: capitalize;
