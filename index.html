@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- Indica al navegador que es un documento HTML5 -->
+
+<!-- lang="es": idioma de la página (lo usan Google y los lectores de pantalla).
+     El botón de idioma lo va a cambiar a "en" en la Fase 6 -->
+<html lang="es">
+
+<head>
+    <!-- Codificación de caracteres: permite tildes, ñ y símbolos -->
+    <meta charset="UTF-8">
+
+    <!-- Hace que el sitio se adapte al ancho del celular (sin esto no es responsive) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Texto que muestra Google debajo del título en los resultados -->
+    <meta name="description" content="Portfolio de Santiago Rinaldi: sobre mí, proyectos y contacto.">
+
+    <!-- Título de la pestaña del navegador -->
+    <title>Santiago Rinaldi | Portfolio</title>
+
+    <!-- Bootstrap 5.3.9 (estilos). integrity verifica que el archivo no fue alterado;
+         crossorigin es obligatorio para que integrity funcione con un CDN -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+          integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
+          crossorigin="anonymous">
+
+    <!-- Bootstrap Icons: íconos de sol/luna, globo, GitHub, etc. -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+          integrity="sha384-nWN3KqaaVcbEsCjLSV+2jMjh62Iny/+mN3srM8TZeM8N6aj7eDl5wwYggjAJ4/sJ"
+          crossorigin="anonymous">
+
+    <!-- Tus estilos propios. Van DESPUÉS de Bootstrap para poder sobrescribirlo -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ===== ENCABEZADO =====
+         Acá va la barra de navegación (navbar) con los botones
+         de modo oscuro e idioma. La armamos en el próximo paso -->
+    <header>
+    </header>
+
+    <!-- ===== CONTENIDO PRINCIPAL =====
+         <main> agrupa todo el contenido central. Debe haber uno solo por página -->
+    <main>
+
+        <!-- Sección Inicio (hero). El id permite llegar con el enlace #inicio -->
+        <section id="inicio">
+            <!-- <h1>: título principal, uno solo en toda la página -->
+            <h1>Santiago Rinaldi</h1>
+        </section>
+
+        <!-- Sección Sobre mí: presentación, estudios y habilidades -->
+        <section id="sobre-mi">
+            <!-- <h2>: título de cada sección, por debajo del <h1> -->
+            <h2>Sobre mí</h2>
+        </section>
+
+        <!-- Sección Proyectos: acá irán las tarjetas (cards) -->
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+        </section>
+
+        <!-- Sección Contacto: email y redes -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+        </section>
+
+    </main>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <footer>
+        <!-- &copy; dibuja el símbolo © -->
+        <p>&copy; 2026 Santiago Rinaldi</p>
+    </footer>
+
+    <!-- ===== SCRIPTS =====
+         Van al final del <body> para que el HTML cargue primero y la página
+         se vea más rápido -->
+
+    <!-- Bootstrap JS (bundle = incluye Popper). Hace funcionar el menú
+         desplegable de la navbar en el celular -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+            crossorigin="anonymous"></script>
+
+    <!-- Tus scripts: primero los textos de cada idioma, después la lógica,
+         porque main.js va a usar lo que define i18n.js -->
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
