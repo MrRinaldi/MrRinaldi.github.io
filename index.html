@@ -38,26 +38,22 @@
      se dibuje la página: así se evita el destello blanco al recargar. -->
     <script src="js/theme.js"></script>
 
-    
-            
 </head>
 
-<body>
-
+<body data-bs-spy="scroll" data-bs-target="#navbar-principal"></body>
     <!-- ===== ENCABEZADO ===== -->
      <!-- data-bs-spy="scroll": activa scrollspy de Bootstrap.
      data-bs-target: qué navbar tiene que marcar (su id).
      Al pasar por cada sección, su enlace recibe la clase "active". -->
-    <body data-bs-spy="scroll" data-bs-target="#navbar-principal">
 
-    <header>
+    <!-- sticky-top: la barra queda pegada arriba al hacer scroll, sin tapar contenido.
+            en pantallas chicas lo esconde detrás del botón de hamburguesa.-->
+    <header class="sticky-top">
         <!-- navbar: componente de barra de navegación de Bootstrap.
             navbar-expand-lg: en pantallas grandes (≥992px) muestra el menú completo;
-            sticky-top: la barra queda pegada arriba al hacer scroll, sin tapar contenido.
-            en pantallas chicas lo esconde detrás del botón de hamburguesa.
             border-bottom: línea fina debajo para separarla del contenido. 
             bg-body-tertiary: fondo gris suave que cambia solo en modo oscuro.-->
-        <nav id="navbar-principal" class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom">
+        <nav id="navbar-principal" class="navbar navbar-expand-lg bg-body-tertiary border-bottom"">
         <!-- container: centra el contenido y le da márgenes laterales -->
         <div class="container">
 
