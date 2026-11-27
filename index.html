@@ -37,14 +37,76 @@
      Va en el <head> y sin "defer" para que se ejecute ANTES de que
      se dibuje la página: así se evita el destello blanco al recargar. -->
     <script src="js/theme.js"></script>
+
+    
+            
 </head>
 
 <body>
 
-    <!-- ===== ENCABEZADO =====
-         Acá va la barra de navegación (navbar) con los botones
-         de modo oscuro e idioma. La armamos en el próximo paso -->
+    <!-- ===== ENCABEZADO ===== -->
+     <!-- data-bs-spy="scroll": activa scrollspy de Bootstrap.
+     data-bs-target: qué navbar tiene que marcar (su id).
+     Al pasar por cada sección, su enlace recibe la clase "active". -->
+    <body data-bs-spy="scroll" data-bs-target="#navbar-principal">
+
     <header>
+        <!-- navbar: componente de barra de navegación de Bootstrap.
+            navbar-expand-lg: en pantallas grandes (≥992px) muestra el menú completo;
+            sticky-top: la barra queda pegada arriba al hacer scroll, sin tapar contenido.
+            en pantallas chicas lo esconde detrás del botón de hamburguesa.
+            border-bottom: línea fina debajo para separarla del contenido. 
+            bg-body-tertiary: fondo gris suave que cambia solo en modo oscuro.-->
+        <nav id="navbar-principal" class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom">
+        <!-- container: centra el contenido y le da márgenes laterales -->
+        <div class="container">
+
+        <!-- navbar-brand: tu nombre o logo; lleva al inicio de la página -->
+        <a class="navbar-brand fw-semibold" href="#inicio">Santiago Rinaldi</a>
+
+        <!-- Botón de hamburguesa: solo se ve en celular.
+             data-bs-toggle="collapse": le dice a Bootstrap que abra/cierre un panel.
+            data-bs-target: cuál panel (el id de la Parte 2).
+            aria-*: describen el botón para lectores de pantalla. -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#menu" aria-controls="menu" aria-expanded="false"
+            aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- collapse navbar-collapse: el panel que se esconde en celular.
+         Su id "menu" es el que apunta el botón de hamburguesa. -->
+        <div class="collapse navbar-collapse" id="menu">
+        <!-- navbar-nav: lista de enlaces. ms-auto: los empuja a la derecha.
+           align-items-lg-center: los centra verticalmente en escritorio. -->
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+        <!-- data-i18n: la "clave" que usará el botón de idioma (Fase 6)
+             para reemplazar este texto. Ponerla ahora evita volver después. -->
+        <li class="nav-item"><a class="nav-link" href="#inicio" data-i18n="nav.inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobre-mi" data-i18n="nav.sobreMi">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proyectos" data-i18n="nav.proyectos">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto" data-i18n="nav.contacto">Contacto</a></li>
+
+                <!-- d-flex gap-2: pone los dos botones en fila con espacio entre ellos.
+             ms-lg-3: margen a la izquierda solo en escritorio. -->
+        <li class="nav-item d-flex gap-2 ms-lg-3 mt-2 mt-lg-0">
+          <!-- Botón de tema. type="button": evita que actúe como "enviar formulario".
+               id: lo usaremos en theme.js para detectar el clic.
+               aria-label: como solo tiene un ícono, esto le dice al lector
+               de pantalla qué hace. -->
+          <button id="btn-tema" type="button" class="btn btn-outline-secondary btn-sm"
+                  aria-label="Cambiar a modo oscuro">
+            <!-- bi bi-moon-stars: ícono de Bootstrap Icons.
+                 aria-hidden: el ícono es decorativo, el lector lo ignora. -->
+            <i class="bi bi-moon-stars" aria-hidden="true"></i>
+          </button>
+          <!-- Botón de idioma: muestra el idioma AL QUE vas a cambiar -->
+          <button id="btn-idioma" type="button" class="btn btn-outline-secondary btn-sm"
+                  aria-label="Cambiar idioma a inglés">EN</button>
+        </li>
+        </ul>
+        </div>  <!-- cierra #menu -->
+        </div>    <!-- cierra .container -->
+        </nav>
     </header>
 
     <!-- ===== CONTENIDO PRINCIPAL =====
