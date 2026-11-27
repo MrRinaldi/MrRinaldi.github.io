@@ -1,0 +1,7 @@
+/* scroll-padding-top: deja un espacio arriba al saltar a un ancla (#proyectos).
+   4.5rem (unos 72px) es un poco más que la altura de la navbar (57px),
+   así el título queda visible y con aire debajo de la barra.
+   Va en "html" porque es el elemento que hace el scroll. */
+html {
+    scroll-padding-top: 4.5rem;
+}
