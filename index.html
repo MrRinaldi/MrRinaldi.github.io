@@ -109,10 +109,60 @@
          <main> agrupa todo el contenido central. Debe haber uno solo por página -->
     <main>
 
-        <!-- Sección Inicio (hero). El id permite llegar con el enlace #inicio -->
-        <section id="inicio">
-            <!-- <h1>: título principal, uno solo en toda la página -->
-            <h1>Santiago Rinaldi</h1>
+            <!-- Sección Inicio (hero). El id permite llegar con el enlace #inicio
+             py-5: padding arriba y abajo (5 = el más grande de Bootstrap). -->
+        <section id="inicio" class="py-5">
+            <!-- container: centra el contenido y le da márgenes laterales -->
+            <div class="container">
+                <!-- row: fila de la grilla de Bootstrap (12 columnas).
+                     align-items-center: centra verticalmente foto y texto.
+                     g-4: espacio entre columnas. -->
+                <div class="row align-items-center g-4">
+
+                    <!-- ===== COLUMNA DE LA FOTO =====
+                         col-md-4: desde pantallas medianas ocupa 4 de 12 columnas.
+                         En celular ocupa todo el ancho (la foto queda arriba).
+                         text-center: centra la imagen dentro de su columna. -->
+                    <div class="col-md-4 text-center">
+                        <!-- img-fluid: la imagen nunca se sale de su columna.
+                             rounded-circle: la recorta en círculo.
+                             alt: describe la imagen (lectores de pantalla / si no carga).
+                             width/height: reservan el espacio antes de que cargue,
+                             así la página no "salta". -->
+                        <img src="img/perfil.webp" alt="Foto de Santiago Rinaldi"
+                             class="img-fluid rounded-circle" width="240" height="240">
+                    </div>
+
+                    <!-- ===== COLUMNA DEL TEXTO =====
+                         col-md-8: ocupa las 8 columnas restantes.
+                         text-center text-md-start: centrado en celular,
+                         alineado a la izquierda desde pantallas medianas. -->
+                    <div class="col-md-8 text-center text-md-start">
+                        <!-- h1: título principal (uno solo en toda la página).
+                             display-5: tamaño grande para títulos destacados.
+                             fw-bold: texto en negrita.
+                             Sin data-i18n: el nombre no se traduce. -->
+                        <h1 class="display-5 fw-bold">Santiago Rinaldi</h1>
+
+                        <!-- lead: párrafo destacado, un poco más grande.
+                             data-i18n: clave para el botón de idioma (Fase 6). -->
+                        <p class="lead" data-i18n="inicio.rol">Desarrollador web</p>
+
+                        <!-- text-body-secondary: gris suave que se adapta al modo oscuro -->
+                        <p class="text-body-secondary" data-i18n="inicio.frase">
+                            Creo sitios simples, rápidos y accesibles.
+                        </p>
+
+                        <!-- btn btn-primary btn-lg: botón principal y grande de Bootstrap.
+                             Es un <a> porque NAVEGA a otra parte de la página;
+                             <button> se usa para acciones (como cambiar el tema). -->
+                        <a href="#proyectos" class="btn btn-primary btn-lg" data-i18n="inicio.boton">
+                            Ver proyectos
+                        </a>
+                    </div>
+
+                </div> <!-- cierra .row -->
+            </div> <!-- cierra .container -->
         </section>
 
         <!-- Sección Sobre mí: presentación, estudios y habilidades -->
