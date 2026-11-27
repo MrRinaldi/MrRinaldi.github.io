@@ -165,10 +165,65 @@
             </div> <!-- cierra .container -->
         </section>
 
-        <!-- Sección Sobre mí: presentación, estudios y habilidades -->
-        <section id="sobre-mi">
-            <!-- <h2>: título de cada sección, por debajo del <h1> -->
-            <h2>Sobre mí</h2>
+              <!-- ===== SECCIÓN SOBRE MÍ =====
+             py-5: padding arriba y abajo.
+             bg-body-tertiary: fondo gris suave (cambia solo en modo oscuro).
+             Alternar fondos entre secciones ayuda a distinguirlas. -->
+        <section id="sobre-mi" class="py-5 bg-body-tertiary">
+            <div class="container">
+
+                <!-- h2: título de la sección. mb-4: margen abajo. -->
+                <h2 class="mb-4" data-i18n="sobreMi.titulo">Sobre mí</h2>
+
+                <!-- g-5: espacio grande entre las dos columnas -->
+                <div class="row g-5">
+
+                    <!-- ===== COLUMNA IZQUIERDA: presentación y estudios =====
+                         col-lg-8: desde pantallas grandes ocupa 8 de 12 columnas.
+                         En celular y tablet ocupa todo el ancho. -->
+                    <div class="col-lg-8">
+                        <!-- Presentación: 2 o 3 oraciones sobre vos -->
+                        <p data-i18n="sobreMi.texto1">
+                            Soy Santiago, estudiante de desarrollo web en Argentina.
+                            Me gusta construir sitios claros, rápidos y fáciles de usar.
+                        </p>
+                        <p data-i18n="sobreMi.texto2">
+                            Actualmente aprendo HTML, CSS, JavaScript y Git creando proyectos propios.
+                        </p>
+
+                        <!-- h3: subtítulo dentro de la sección (debajo del h2).
+                             h5: lo muestra más chico sin cambiar su jerarquía. -->
+                        <h3 class="h5 mt-4" data-i18n="sobreMi.estudiosTitulo">Estudios</h3>
+                        <!-- list-unstyled: lista sin viñetas -->
+                        <ul class="list-unstyled">
+                            <!-- bi-mortarboard: ícono de birrete. me-2: margen a la derecha -->
+                            <li data-i18n="sobreMi.estudio1">
+                                <i class="bi bi-mortarboard me-2" aria-hidden="true"></i>Nombre de la carrera o curso, institución (año)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- ===== COLUMNA DERECHA: habilidades =====
+                         col-lg-4: ocupa las 4 columnas restantes. -->
+                    <div class="col-lg-4">
+                        <h3 class="h5" data-i18n="sobreMi.habilidadesTitulo">Habilidades</h3>
+                        <!-- d-flex flex-wrap gap-2: pone las etiquetas en fila,
+                             pasa a la línea siguiente si no entran, con espacio entre ellas.
+                             Sin data-i18n: los nombres de tecnologías no se traducen. -->
+                        <div class="d-flex flex-wrap gap-2">
+                            <!-- badge: etiqueta chica de Bootstrap.
+                                 text-bg-secondary: fondo gris con texto legible (también en modo oscuro). -->
+                            <span class="badge text-bg-secondary">HTML5</span>
+                            <span class="badge text-bg-secondary">CSS3</span>
+                            <span class="badge text-bg-secondary">JavaScript</span>
+                            <span class="badge text-bg-secondary">Bootstrap</span>
+                            <span class="badge text-bg-secondary">Git</span>
+                            <span class="badge text-bg-secondary">GitHub</span>
+                        </div>
+                    </div>
+
+                </div> <!-- cierra .row -->
+            </div> <!-- cierra .container -->
         </section>
 
         <!-- Sección Proyectos: acá irán las tarjetas (cards) -->
