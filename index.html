@@ -175,8 +175,10 @@
                 <!-- h2: título de la sección. mb-4: margen abajo. -->
                 <h2 class="mb-4" data-i18n="sobreMi.titulo">Sobre mí</h2>
 
-                <!-- g-5: espacio grande entre las dos columnas -->
-                <div class="row g-5">
+                <!-- g-4: espacio de 24px entre columnas.
+                    No usar g-5 acá: es más ancho que el margen del container
+                    y genera scroll horizontal en celular. -->
+                    <div class="row g-4">
 
                     <!-- ===== COLUMNA IZQUIERDA: presentación y estudios =====
                          col-lg-8: desde pantallas grandes ocupa 8 de 12 columnas.
