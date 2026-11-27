@@ -33,6 +33,10 @@
 
     <!-- Tus estilos propios. Van DESPUÉS de Bootstrap para poder sobrescribirlo -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Script del tema (modo oscuro/claro).
+     Va en el <head> y sin "defer" para que se ejecute ANTES de que
+     se dibuje la página: así se evita el destello blanco al recargar. -->
+    <script src="js/theme.js"></script>
 </head>
 
 <body>
